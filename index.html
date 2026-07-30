@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>The Silver Spoon | Indian & Chinese Luxury Restaurant in Hooghly</title>
+  <meta name="title" content="The Silver Spoon | Indian & Chinese Luxury Restaurant in Hooghly">
+  <meta name="description" content="Experience authentic Indian Mughlai & Tandoor delicacies alongside fiery Sichuan-Cantonese Chinese wok artistry at The Silver Spoon in Mogra, Hooghly. Reserve a table or order online.">
+  <meta name="keywords" content="The Silver Spoon, Indian Restaurant Hooghly, Chinese Restaurant Mogra, Fine Dining Saptagram, Biryani, Butter Chicken, Dim Sum, Table Reservation">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="uploads/logo.png">
+  <link rel="apple-touch-icon" href="uploads/logo.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thesilverspoon.org/">
+  <meta property="og:title" content="The Silver Spoon | Indian & Chinese Luxury Restaurant">
+  <meta property="og:description" content="One Spoon, Endless Flavors. Authentic Indian & Chinese Fine Dining Experience in Hooghly, West Bengal.">
+  <meta property="og:image" content="uploads/logo.png">
+
+  <!-- Google Fonts & Icon Libraries -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD Structured Data for Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "The Silver Spoon",
+    "image": "https://thesilverspoon.org/uploads/logo.png",
+    "@id": "https://thesilverspoon.org",
+    "url": "https://thesilverspoon.org",
+    "telephone": "+919471978478",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Barakhejuria, PO - Adcoonagar, Mogra",
+      "addressLocality": "Saptagram, Hooghly",
+      "addressRegion": "West Bengal",
+      "postalCode": "712121",
+      "addressCountry": "IN"
+    },
+    "servesCuisine": ["Indian", "Chinese", "Mughlai", "Asian"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "12:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "19:00",
+        "closes": "23:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 1: NAVIGATION HEADER & FULLSCREEN OVERLAY MENU
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <img src="uploads/logo.png" alt="The Silver Spoon Logo">
+        <div class="brand-text-box">
+          <span class="brand-name">THE SILVER SPOON</span>
+          <span class="brand-sub">INDIAN &bull; CHINESE RESTAURANT</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="desktop-nav">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">Heritage</a></li>
+          <li><a href="#fusion" class="nav-link">Cuisines</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#signature" class="nav-link">Specials</a></li>
+          <li><a href="#ambiance" class="nav-link">Ambiance</a></li>
+          <li><a href="#reservation" class="nav-link">Reservation</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-icon-btn" id="cartToggleBtn" aria-label="View Shopping Cart">
+          <i class="fa-solid fa-utensils"></i>
+          <span class="cart-count">0</span>
+        </button>
+
+        <a href="#reservation" class="btn btn-gold" style="display: none;">Book Table</a>
+
+        <!-- Mobile Toggle Button (Morphing Hamburger -> X) -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <div class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Animated Menu Overlay -->
+  <div class="fullscreen-menu-overlay" id="fullscreenMenuOverlay">
+    <div class="menu-bg-decoration">
+      <div class="menu-glow-1"></div>
+      <div class="menu-glow-2"></div>
+    </div>
+
+    <ul class="fullscreen-nav-list">
+      <li class="fullscreen-nav-item"><a href="#hero" class="fullscreen-nav-link">Home</a></li>
+      <li class="fullscreen-nav-item"><a href="#about" class="fullscreen-nav-link">Heritage</a></li>
+      <li class="fullscreen-nav-item"><a href="#fusion" class="fullscreen-nav-link">Cuisines</a></li>
+      <li class="fullscreen-nav-item"><a href="#menu" class="fullscreen-nav-link">Menu</a></li>
+      <li class="fullscreen-nav-item"><a href="#signature" class="fullscreen-nav-link">Specials</a></li>
+      <li class="fullscreen-nav-item"><a href="#ambiance" class="fullscreen-nav-link">Ambiance</a></li>
+      <li class="fullscreen-nav-item"><a href="#reservation" class="fullscreen-nav-link">Reservation</a></li>
+      <li class="fullscreen-nav-item"><a href="#contact" class="fullscreen-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ==========================================================================
+       SECTION 2: HERO STAGE (3D WEBGL INTERACTIVE CANVAS)
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <canvas id="three-canvas"></canvas>
+
+    <div class="container hero-content">
+      <div class="hero-text-block reveal-on-scroll">
+        <div class="hero-subtitle">Welcome to Pure Luxury</div>
+        <h1 class="hero-title">
+          A Symphony of <span class="gold-gradient-text">Indian Spices</span> &amp; <span class="olive-gradient-text">Chinese Wok</span> Artistry
+        </h1>
+        <p class="hero-description">
+          Immerse yourself in an extraordinary culinary journey where heritage Indian Mughlai tandoori recipes harmoniously meet fiery Sichuan-Cantonese wok master creations.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#reservation" class="btn btn-gold">
+            <i class="fa-solid fa-calendar-check"></i> Reserve a Table
+          </a>
+          <a href="#menu" class="btn btn-outline">
+            <i class="fa-solid fa-book-open"></i> Explore Menu
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Interactive Tilt Card -->
+      <div class="hero-3d-card-wrapper reveal-right delay-2">
+        <div class="hero-3d-card">
+          <div class="hero-card-img-box">
+            <span class="hero-card-badge">CHEF'S HIGHLIGHT</span>
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Royal Biryani Dish">
+          </div>
+          <h3 class="hero-card-title gold-gradient-text">Royal Awadhi Biryani</h3>
+          <p class="hero-card-desc">Fragrant basmati rice layered with aromatic saffron, roasted spices, and slow-cooked succulent meats in a sealed clay pot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 3: OUR HERITAGE & ANIMATED STATISTICS (ABOUT US)
+       ========================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-frame reveal-left">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Luxury Dining Hall Interior" class="about-img-main">
+          
+          <div class="about-floating-badge">
+            <i class="fa-solid fa-award badge-icon"></i>
+            <div class="badge-text">
+              <h4>15+</h4>
+              <p>Master Chefs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <span class="section-tag"><i class="fa-solid fa-crown"></i> Our Story</span>
+          <h2 class="section-title">Crafting Culinary Excellence With Passion</h2>
+          <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.05rem;">
+            At <strong>The Silver Spoon</strong>, we believe every meal should be a celebratory feast. Located in the cultural heart of Saptagram, Mogra (Hooghly), our restaurant brings together two of the world's most revered culinary traditions.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 0.95rem;">
+            Our master chefs hand-pick authentic Indian spices from regional gardens and employ age-old clay tandoor techniques alongside high-flame Cantonese wok wok firing to craft dishes of unmatched depth and aroma.
+          </p>
+
+          <div class="stats-counter-grid">
+            <div class="stat-box">
+              <div class="stat-number" data-target="15" data-suffix="+">0</div>
+              <div class="stat-label">Master Culinary Chefs</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" data-target="120" data-suffix="+">0</div>
+              <div class="stat-label">Signature Dishes</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" data-target="50" data-suffix="K+">0</div>
+              <div class="stat-label">Delighted Diners</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" data-target="4" data-suffix=".9 ★">0</div>
+              <div class="stat-label">Google Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4: DUAL CULINARY FUSION SHOWCASE
+       ========================================================================== -->
+  <section id="fusion" class="fusion-section">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-tag"><i class="fa-solid fa-fire-burner"></i> Two Royalities, One Spoon</span>
+      <h2 class="section-title">Dual Cuisine Masterclass</h2>
+      <p class="section-subtitle">Discover the dual powerhouses of flavor that define our signature menu.</p>
+
+      <div class="fusion-container">
+        <!-- Indian Cuisine Card -->
+        <div class="fusion-card reveal-left">
+          <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80" alt="Indian Cuisine" class="fusion-card-img">
+          <div class="fusion-card-content">
+            <div class="fusion-flag">Royal Indian Gastronomy</div>
+            <h3 class="fusion-title gold-gradient-text">Aromatic Curries &amp; Clay Tandoor</h3>
+            <p class="fusion-desc">Indulge in rich Awadhi Biryanis, velvety Butter Chicken, smoky Charcoal Kebab platters, and garlic butter naans baked fresh in traditional clay ovens.</p>
+            <div class="fusion-tag-list">
+              <span class="fusion-tag-item">Dum Biryani</span>
+              <span class="fusion-tag-item">Tandoori Kebabs</span>
+              <span class="fusion-tag-item">Rich Mughlai Gravies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chinese Cuisine Card -->
+        <div class="fusion-card reveal-right">
+          <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80" alt="Chinese Cuisine" class="fusion-card-img">
+          <div class="fusion-card-content">
+            <div class="fusion-flag">Sichuan &amp; Cantonese Artistry</div>
+            <h3 class="fusion-title olive-gradient-text">Fiery Wok &amp; Dim Sum Mastery</h3>
+            <p class="fusion-desc">Savor high-flame wok creations including Schezwan Dragon Noodles, Steamed Crystal Dim Sums, Chilli Garlic Prawns, and Crispy Lotus Stem.</p>
+            <div class="fusion-tag-list">
+              <span class="fusion-tag-item">Sichuan Wok</span>
+              <span class="fusion-tag-item">Steamed Dim Sum</span>
+              <span class="fusion-tag-item">Hakka Noodles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: INTERACTIVE 3D MASTER MENU
+       ========================================================================== -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-tag"><i class="fa-solid fa-utensils"></i> Our Culinary Portfolio</span>
+        <h2 class="section-title">Interactive Master Menu</h2>
+        <p class="section-subtitle">Explore our hand-crafted offerings. Filter by category or search your favorite dish.</p>
+      </div>
+
+      <!-- Filter & Search Controls -->
+      <div class="menu-filter-bar reveal-on-scroll">
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-filter="all">All Dishes</button>
+          <button class="tab-btn" data-filter="indian">Indian Classics</button>
+          <button class="tab-btn" data-filter="chinese">Chinese Wok</button>
+          <button class="tab-btn" data-filter="specials">Chef's Specials</button>
+          <button class="tab-btn" data-filter="starters">Appetizers</button>
+        </div>
+
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" class="menu-search-input" id="menuSearchInput" placeholder="Search dishes, ingredients...">
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid">
+        <!-- Item 1 -->
+        <div class="menu-card reveal-on-scroll" data-category="indian">
+          <div class="menu-card-img-box">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken" class="menu-card-img">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h4 class="menu-item-title">Butter Chicken Grandeur</h4>
+              <span class="menu-item-price">₹380</span>
+            </div>
+            <p class="menu-item-desc">Tender tandoori chicken simmered in a velvety makhani gravy enriched with cashew butter and fresh cream.</p>
+            <div class="menu-card-footer">
+              <span class="dietary-badge non-veg"><i class="fa-solid fa-circle"></i> Non-Veg</span>
+              <button class="add-cart-btn" data-name="Butter Chicken Grandeur" data-price="380">+ Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="menu-card reveal-on-scroll delay-1" data-category="chinese">
+          <div class="menu-card-img-box">
+            <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Dim Sum" class="menu-card-img">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h4 class="menu-item-title">Crystal Chicken Dim Sum</h4>
+              <span class="menu-item-price">₹320</span>
+            </div>
+            <p class="menu-item-desc">Handcrafted translucent dumplings stuffed with minced chicken, water chestnuts, and sesame oil served with chili sauce.</p>
+            <div class="menu-card-footer">
+              <span class="dietary-badge non-veg"><i class="fa-solid fa-circle"></i> Non-Veg</span>
+              <button class="add-cart-btn" data-name="Crystal Chicken Dim Sum" data-price="320">+ Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="menu-card reveal-on-scroll delay-2" data-category="specials">
+          <div class="menu-card-img-box">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Royal Dum Biryani" class="menu-card-img">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h4 class="menu-item-title">Royal Awadhi Mutton Biryani</h4>
+              <span class="menu-item-price">₹450</span>
+            </div>
+            <p class="menu-item-desc">Slow-cooked tender mutton marinated in curd and whole spices, sealed in a handi with fragrant saffron basmati rice.</p>
+            <div class="menu-card-footer">
+              <span class="dietary-badge non-veg"><i class="fa-solid fa-circle"></i> Non-Veg</span>
+              <button class="add-cart-btn" data-name="Royal Awadhi Mutton Biryani" data-price="450">+ Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="menu-card reveal-on-scroll" data-category="chinese">
+          <div class="menu-card-img-box">
+            <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80" alt="Schezwan Noodles" class="menu-card-img">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h4 class="menu-item-title">Dragon Schezwan Noodles</h4>
+              <span class="menu-item-price">₹280</span>
+            </div>
+            <p class="menu-item-desc">Wok-tossed handmade noodles tossed with fiery Schezwan peppers, bell peppers, scallions, and signature house sauce.</p>
+            <div class="menu-card-footer">
+              <span class="dietary-badge veg"><i class="fa-solid fa-circle"></i> Veg</span>
+              <button class="add-cart-btn" data-name="Dragon Schezwan Noodles" data-price="280">+ Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="menu-card reveal-on-scroll delay-1" data-category="starters">
+          <div class="menu-card-img-box">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka" class="menu-card-img">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h4 class="menu-item-title">Malai Paneer Tikka Supreme</h4>
+              <span class="menu-item-price">₹310</span>
+            </div>
+            <p class="menu-item-desc">Soft cottage cheese cubes marinated in rich cashew-cream paste, green cardamom, and grilled in clay tandoor.</p>
+            <div class="menu-card-footer">
+              <span class="dietary-badge veg"><i class="fa-solid fa-circle"></i> Veg</span>
+              <button class="add-cart-btn" data-name="Malai Paneer Tikka Supreme" data-price="310">+ Add to Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="menu-card reveal-on-scroll delay-2" data-category="specials">
+          <div class="menu-card-img-box">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Sichuan Prawns" class="menu-card-img">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h4 class="menu-item-title">Sichuan Garlic Butter Prawns</h4>
+              <span class="menu-item-price">₹490</span>
+            </div>
+            <p class="menu-item-desc">Jumbo tiger prawns seared in garlic butter, bird's eye chili, scallions, and dry red peppers in wok high heat.</p>
+            <div class="menu-card-footer">
+              <span class="dietary-badge non-veg"><i class="fa-solid fa-circle"></i> Non-Veg</span>
+              <button class="add-cart-btn" data-name="Sichuan Garlic Butter Prawns" data-price="490">+ Add to Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 6: CHEF'S SIGNATURE SPOTLIGHT (3D CAROUSEL)
+       ========================================================================== -->
+  <section id="signature" class="signature-section">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-star"></i> Culinary Masterpieces</span>
+          <h2 class="section-title">Chef's Signature Creations</h2>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <button class="btn btn-outline" id="carouselPrev" aria-label="Previous Slide"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="btn btn-gold" id="carouselNext" aria-label="Next Slide"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="signature-carousel-wrapper reveal-on-scroll">
+        <div class="signature-carousel-track" id="signatureTrack">
+          <!-- Card 1 -->
+          <div class="signature-card">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Smokey Tandoori Lamb Chops" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:20px;">
+            <h4 style="font-size:1.4rem; color:var(--gold-light); margin-bottom:8px;">Smokey Tandoori Lamb Chops</h4>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Marinated for 24 hours in nutmeg, raw papaya, and dark malt vinegar before roasting over glowing coal fire.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="signature-card">
+            <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=80" alt="Honey Chilli Glazed Lotus Stem" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:20px;">
+            <h4 style="font-size:1.4rem; color:var(--gold-light); margin-bottom:8px;">Crispy Lotus Stem in Wild Honey</h4>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Thinly sliced lotus root crisp fried and tossed in organic wild honey, toasted sesame seeds, and crushed red pepper flakes.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="signature-card">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" alt="Zafrani Shahi Tukda" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:20px;">
+            <h4 style="font-size:1.4rem; color:var(--gold-light); margin-bottom:8px;">Zafrani Shahi Rabri Tukda</h4>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Golden fried bread soaked in saffron-infused syrup, topped with thick pistachios and 24-carat edible silver leaf (Vark).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 7: AMBIANCE & FINE DINING GALLERY
+       ========================================================================== -->
+  <section id="ambiance" class="ambiance-section">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-tag"><i class="fa-solid fa-camera"></i> Visual Journey</span>
+        <h2 class="section-title">The Silver Spoon Ambiance</h2>
+        <p class="section-subtitle">Take a glimpse inside our opulent dining hall, private VIP suites, and open wok kitchen.</p>
+      </div>
+
+      <div class="gallery-grid reveal-on-scroll">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Main Luxury Dining Hall">
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Grand Dining Room</h4>
+            <p class="gallery-caption">Plush seating bathed in warm ambient chandeliers</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Private VIP Room">
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Private VIP Suite</h4>
+            <p class="gallery-caption">Exclusive space for family and business dinners</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80" alt="Open Wok Kitchen">
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Live Wok &amp; Tandoor Station</h4>
+            <p class="gallery-caption">Watch master chefs fire up dishes right before your eyes</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" alt="Romantic Evening Setup">
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Candlelit Evening Setup</h4>
+            <p class="gallery-caption">Perfect intimate atmosphere for date nights and anniversaries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 8: TABLE RESERVATION SYSTEM
+       ========================================================================== -->
+  <section id="reservation" class="reservation-section">
+    <div class="container">
+      <div class="reservation-box reveal-on-scroll">
+        <div style="text-align: center;">
+          <span class="section-tag"><i class="fa-solid fa-chair"></i> Instant Confirmation</span>
+          <h2 class="section-title">Reserve Your Table</h2>
+          <p style="color:var(--text-muted); margin-bottom: 30px;">Book a table online to secure your preferred date, time, and dining area.</p>
+        </div>
+
+        <form id="reservationForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="resName">Full Name *</label>
+              <input type="text" class="form-control" id="resName" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resPhone">Phone Number *</label>
+              <input type="tel" class="form-control" id="resPhone" placeholder="e.g. +91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resGuests">Number of Guests *</label>
+              <select class="form-control" id="resGuests" required>
+                <option value="2 Guests">2 Guests (Couple Table)</option>
+                <option value="4 Guests">4 Guests (Family Table)</option>
+                <option value="6 Guests">6 Guests (Group)</option>
+                <option value="8+ Guests">8+ Guests (VIP Room)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resArea">Seating Preference</label>
+              <select class="form-control" id="resArea">
+                <option value="Main Dining Hall">Main Dining Hall</option>
+                <option value="Private VIP Room">Private VIP Room</option>
+                <option value="Courtyard View">Courtyard View</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resDate">Reservation Date *</label>
+              <input type="date" class="form-control" id="resDate" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resTime">Preferred Time Slot *</label>
+              <select class="form-control" id="resTime" required>
+                <option value="12:30 PM">12:30 PM (Lunch)</option>
+                <option value="02:00 PM">02:00 PM (Lunch)</option>
+                <option value="07:30 PM">07:30 PM (Dinner)</option>
+                <option value="09:00 PM">09:00 PM (Dinner)</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="resNotes">Special Requests (Optional)</label>
+              <textarea class="form-control" id="resNotes" rows="3" placeholder="Anniversary celebration, high chair, spice preferences..."></textarea>
+            </div>
+
+            <div class="form-group full-width text-center" style="margin-top: 10px; text-align: center;">
+              <button type="submit" class="btn btn-gold" style="width: 100%; max-width: 320px;">
+                <i class="fa-solid fa-paper-plane"></i> Confirm Reservation
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Success Modal -->
+  <div class="modal-backdrop" id="reservationModal">
+    <div class="modal-card">
+      <div class="modal-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 style="font-size: 1.8rem; margin-bottom: 10px;" class="gold-gradient-text">Reservation Confirmed!</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+        Thank you for choosing <strong>The Silver Spoon</strong>. We look forward to serving you!
+      </p>
+      <div style="background: rgba(197, 155, 39, 0.1); border: 1px dashed var(--gold-main); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 25px;">
+        <span style="font-size: 0.8rem; color: var(--gold-main); text-transform: uppercase; letter-spacing: 2px; display:block; margin-bottom:4px;">Booking Code</span>
+        <strong id="bookingCode" style="font-size: 1.6rem; color: #fff; letter-spacing: 2px;">SS-849201</strong>
+      </div>
+      <button class="btn btn-gold" id="closeModalBtn">Done</button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       SECTION 9: LIVE ONLINE ORDER TAKEAWAY DRAWER
+       ========================================================================== -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 class="cart-title"><i class="fa-solid fa-bag-shopping" style="color:var(--gold-main); margin-right:8px;"></i> Your Order Cart</h3>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+      <!-- Dynamic Items Rendered Here -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal Amount:</span>
+        <span id="cartSubtotal" class="gold-gradient-text">₹0</span>
+      </div>
+      <button class="btn btn-gold" style="width: 100%;" onclick="alert('Proceeding to secure checkout! Call +91 94719 78478 for immediate takeaway dispatch.')">
+        <i class="fa-solid fa-truck-fast"></i> Proceed to Order Checkout
+      </button>
+    </div>
+  </aside>
+
+
+  <!-- ==========================================================================
+       SECTION 10: GUEST REVIEWS & TESTIMONIALS
+       ========================================================================== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-tag"><i class="fa-solid fa-heart"></i> Diners Choice</span>
+        <h2 class="section-title">Words From Our Diners</h2>
+        <p class="section-subtitle">Read why local food connoisseurs consider us the premier dining destination in Hooghly.</p>
+      </div>
+
+      <div class="testimonial-grid reveal-on-scroll">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div style="color: var(--gold-main); margin-bottom: 12px;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">"The Awadhi Biryani and Butter Chicken are out of this world! The ambiance feels like a 5-star hotel in Kolkata. Truly a gem in Mogra."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sourav Roy" class="author-avatar">
+            <div>
+              <h5 class="author-name">Sourav Roy</h5>
+              <span class="author-role">Verified Gourmet Diner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div style="color: var(--gold-main); margin-bottom: 12px;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">"Best Schezwan Prawns and Steamed Dim Sums in the entire Hooghly district. Quick hospitality and high hygiene standards."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Priya Banerjee" class="author-avatar">
+            <div>
+              <h5 class="author-name">Anirban Banerjee</h5>
+              <span class="author-role">Food Blogger &amp; Critic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div style="color: var(--gold-main); margin-bottom: 12px;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">"Hosted my daughter's birthday party here. The private VIP room was spacious and the multi-cuisine buffet received 100% praise from all guests."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Sujata Ghosh" class="author-avatar">
+            <div>
+              <h5 class="author-name">Sujata Ghosh</h5>
+              <span class="author-role">Event Host</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 11: PRIVATE EVENTS & CATERING
+       ========================================================================== -->
+  <section id="events" class="events-section">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-tag"><i class="fa-solid fa-champagne-glasses"></i> Celebrations</span>
+        <h2 class="section-title">Events &amp; Outdoor Catering</h2>
+        <p class="section-subtitle">From intimate family get-togethers to grand outdoor wedding banquets.</p>
+      </div>
+
+      <div class="events-grid reveal-on-scroll">
+        <div class="event-card">
+          <i class="fa-solid fa-cake-candles event-icon"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Private Birthday Parties</h3>
+          <p style="color:var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Customized themed table decor, mocktail bar setup, and tailored multi-course menu.</p>
+          <a href="#reservation" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Inquire Event</a>
+        </div>
+
+        <div class="event-card">
+          <i class="fa-solid fa-handshake event-icon"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Corporate Dinners</h3>
+          <p style="color:var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Dedicated VIP hall equipped with AV presentation gear and buffet catering service.</p>
+          <a href="#reservation" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Inquire Event</a>
+        </div>
+
+        <div class="event-card">
+          <i class="fa-solid fa-van-shuttle event-icon"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Outdoor Wedding Catering</h3>
+          <p style="color:var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Full live tandoor and live wok counters set up at your chosen venue with trained service staff.</p>
+          <a href="#reservation" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Inquire Event</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 12: LOCATION, OPERATING HOURS & MAP
+       ========================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card reveal-left">
+          <span class="section-tag"><i class="fa-solid fa-map-pin"></i> Reach Us</span>
+          <h2 class="section-title" style="margin-bottom: 30px;">Visit The Silver Spoon</h2>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--gold-light);">Our Location</h4>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Barakhejuria, PO - Adcoonagar, Mogra, Block Saptagram, District Hooghly, West Bengal - 712121
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--gold-light);">Phone &amp; WhatsApp</h4>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                <a href="tel:+919471978478" style="color: #fff; text-decoration: none;">+91 94719 78478</a> /
+                <a href="tel:+919934318146" style="color: #fff; text-decoration: none;">+91 99343 18146</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--gold-light);">Opening Hours</h4>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Lunch: 12:00 PM – 04:00 PM<br>
+                Dinner: 07:00 PM – 11:00 PM (Open 7 Days)
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--gold-light);">Email Inquiries</h4>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                <a href="mailto:info@thesilverspoon.org" style="color: var(--gold-main); text-decoration: none;">info@thesilverspoon.org</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrapper reveal-right">
+          <!-- Styled Interactive Google Map Embed -->
+          <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14693.3642302324!2d88.3697!3d22.9831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f892c2a0b12345%3A0x123456789abcdef!2sMogra%2C%20West%20Bengal%20712121!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The Silver Spoon Location Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 13: LUXURY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo" style="margin-bottom: 16px;">
+            <img src="uploads/logo.png" alt="The Silver Spoon Logo" style="height: 48px;">
+            <div class="brand-text-box">
+              <span class="brand-name">THE SILVER SPOON</span>
+              <span class="brand-sub">INDIAN &bull; CHINESE RESTAURANT</span>
+            </div>
+          </a>
+          <p>One Spoon, Endless Flavors. Elevating dining into a memorable multi-sensory culinary celebration in West Bengal.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#fusion">Dual Fusion</a></li>
+            <li><a href="#menu">Master Menu</a></li>
+            <li><a href="#signature">Chef's Specials</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Dining Info</h4>
+          <ul class="footer-links">
+            <li><a href="#reservation">Table Reservation</a></li>
+            <li><a href="#ambiance">Ambiance Gallery</a></li>
+            <li><a href="#events">Private Catering</a></li>
+            <li><a href="#testimonials">Guest Reviews</a></li>
+            <li><a href="#contact">Location &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Business Verification</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+            Govt Registered Enterprise<br>
+            <strong>UDYAM-WB-07-0134418</strong>
+          </p>
+          <div style="display: flex; gap: 14px; margin-top: 16px;">
+            <a href="#" style="color: var(--gold-main); font-size: 1.2rem;" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" style="color: var(--gold-main); font-size: 1.2rem;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" style="color: var(--gold-main); font-size: 1.2rem;" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Silver Spoon. All rights reserved. | <a href="https://thesilverspoon.org/" style="color: var(--gold-main); text-decoration:none;">https://thesilverspoon.org/</a></div>
+        <div>Designed with 3D WebGL &amp; Modern Web Standards</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Libraries -->
+  <!-- Three.js for 3D Stage -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
